@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <h1>Nova Propriedade</h1>
+     <form name="form">
+         <div class="form-group">
+              <label for="nome"></label>
+                <input type="text" id="nome" name="nome" class="form-control" placeholder="Informe um nome"
+                       [(ngModel)]="propriedade.nome"/>
+         </div>
+    <button type="button" class="btn btn-default" (click)="submit()">Enviar</button>
+     </form>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+        <h2>Minhas Propriedades</h2>
+        <p>
+           <a routerLink="/propriedade/new" class="btn btn-default">Nova Propriedade</a>
+        </p>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Código</th>
+                <th>Usuário</th>
+                <th>Cidade</th>
+                <th>País</th>
+                <th>Data</th>
+                <th>Nome</th>
+                <th>Numero Cadastro</th>
+                <th>Tamanho</th>
+                <th>Localidade</th>
+                <th>Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+            <template [ngIf]="1>2">
+                <tr>
+                    <td>Teste</td>
+                </tr>
+
+            </template>
+            <tr *ngFor="let propriedade of propriedades">
+                <td>{{propriedade.id}}</td>
+                <td>{{propriedade.usuario_id}}</td>
+                <td>{{propriedade.cidades_id}}</td>
+                <td>{{propriedade.pais_id}}</td>
+                <td>{{propriedade.data}}</td>
+                <td>{{propriedade.nome}}</td>
+                <td>{{propriedade.nro_car}}</td>
+                <td>{{propriedade.tamanho}}</td>
+                <td>{{propriedade.localidade}}</td>
+            <td>
+
+               <button type="button" class="btn btn-default" (click)="goToEdit(propriedade.id)">
+                   <span class="glyphicon glyphicon-pencil"></span>
+               </button>
+
+                <button type="button" class="btn btn-danger" (click)="deletePropriedade(propriedade.id)">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </button>
+            </td>
+               </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

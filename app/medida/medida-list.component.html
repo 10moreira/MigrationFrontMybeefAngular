@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+
+        <h2> Minhas Medidas</h2>
+        <p>
+            <a routerLink="/medida/new" class="btn btn-default"> Nova Medida</a>
+        </p>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Código</th>
+                <th>Valor</th>
+                <th>Ano</th>
+                <th>Propriedade</th>
+            </tr>
+            </thead>
+            <tbody>
+                <template [ngIf]="1>2">
+                    <tr>
+                        <td>Teste</td>
+                    </tr>
+                </template>
+            <tr *ngFor="let medida of medidas">
+                <td>{{medida.id}}</td>
+                <td>{{medida.valor}}</td>
+                <td>{{medida.ano}}</td>
+                <td>{{medida.propriedade_id}}</td>
+             <td>
+                <button type="button" class="btn btn-default" (click)="goToEdit(medida.id)">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </button>
+                <button type="button" class="btn btn-danger" (click)="deleteMedida(medida.id)">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </button>
+            </td>
+            </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+</div>

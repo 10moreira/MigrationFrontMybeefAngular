@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <h1>Editor Medida</h1>
+        <form name="form">
+            <div>
+                <label>Código:</label>
+                <span>{{medida.id}}</span>
+            </div>
+            <div class="form-group">
+                <label for="valor"></label>
+            <input type="text" id="valor" name="valor" class="form-control" placeholder="Digite o valor"
+            [(ngModel)]="medida.valor"/>
+
+            </div>
+            <button type="button" class="btn btn-default" (click)="submit()">Enviar</button>
+
+          </form>
+
+    </div>
+
+</div>

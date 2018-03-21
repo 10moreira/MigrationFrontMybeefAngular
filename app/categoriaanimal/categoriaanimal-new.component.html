@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <h1>Nova categoria</h1>
+        <form name="form">
+            <div class="form-group">
+                <label for="nomeCategoria"></label>
+                  <input type="text" id="nomeCategoria" name="nomeCategoria" class="form-control" placeholder="Crie uma nova categoria"
+                         [(ngModel)]="categoriaAnimal.nomeCategoria"/>
+            </div>
+            <button type="button" class="btn btn-default" (click)="submit()">Enviar</button>
+        </form>
+    </div>
+</div>

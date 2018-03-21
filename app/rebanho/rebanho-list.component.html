@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <h2>Meu Rebanho</h2>
+        <p>
+            <a routerLink="/rebanho/new" class="btn btn-default">Novo Rebanho</a>
+        </p>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Ano</th>
+                    <th>Propriedade_id</th>
+                    <th>Categoria_animal_id</th>
+                    <th>Quantidade Estocada</th>
+                    <th>Peso Estocado</th>
+                    <th>Quantidade Vendida</th>
+                    <th>Peso Vendido</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+        <tbody>
+          <template [ngIf]="1>2">
+              <tr>
+                  <td>Teste</td>
+              </tr>
+          </template>
+           <tr *ngFor="let rebanho of rebanhos">
+               <td>{{rebanho.id}}</td>
+               <td>{{rebanho.ano}}</td>
+               <td>{{rebanho.propriedade_id}}</td>
+               <td>{{rebanho.categoria_animal_id}}</td>
+               <td>{{rebanho.qtd_estocada}}</td>
+               <td>{{rebanho.peso_estocado}}</td>
+               <td>{{rebanho.qtd_vendida}}</td>
+               <td>{{rebanho.peso_vendido}}</td>
+
+            <td>
+        <button type="button" class="btn btn-default" (click)="goToEdit(rebanho.id)">
+            <span class="glyphicon glyphicon-pencil"></span>
+         </button>
+
+        <button type="button" class="btn btn-danger" (click)="deleteRebanho(rebanho.id)">
+            <span class="glyphicon glyphicon-trash"></span>
+         </button>
+              </td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+</div>

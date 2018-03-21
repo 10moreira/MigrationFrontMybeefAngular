@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <h2>Meus usuarios</h2>
+
+        <p>
+            <a routerLink="/usuario/new" class="btn btn-default">Novo usuario</a>
+        </p>
+
+        <table class="table">
+            <thead>
+            <tr>
+               <th>Código</th>
+                <th>Cidades_id</th>
+                <th>Pais_id</th>
+                <th>Login</th>
+                <th>Email</th>
+                <th>Senha</th>
+                <th>Perfil</th>
+                <th>Nome</th>
+                <th>Localidade</th>
+                <th>Telefone</th>
+                <th>Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+              <template [ngIf]="1>2">
+
+                  <tr>
+                      <td>Teste</td>
+                  </tr>
+              </template>
+            <tr *ngFor="let usuario of usuarios">
+                <td>{{usuario.id}}</td>
+                <td>{{usuario.cidades_id}}</td>
+                <td>{{usuario.pais_id}}</td>
+                <td>{{usuario.login}}</td>
+                <td>{{usuario.email}}</td>
+                <td>{{usuario.senha}}</td>
+                <td>{{usuario.perfil}}</td>
+                <td>{{usuario.nome}}</td>
+                <td>{{usuario.localidade}}</td>
+                <td>{{usuario.telefone}}</td>
+                <td>
+                <button type="button" class="btn btn-default" (click)="goToEdit(usuario.id)">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </button>
+                <button type="button" class="btn btn-danger" (click)="deleteUsuario(usuario.id)">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

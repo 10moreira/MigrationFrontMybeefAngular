@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <h1>Nova Medida</h1>
+     <form name="form">
+         <div class="form-group">
+             <label for="valor"></label>
+                 <input type="number" id="valor" name="valor" class="form-control" placeholder="Informe um valor"
+                 [(ngModel)]="medida.valor"/>
+
+         </div>
+         <button type="button" class="btn btn-default" (click)="submit()">Enviar</button>
+     </form>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="container">
+      <div class="row">
+          <h2>Minhas categorias</h2>
+
+          <p>
+              <a routerLink="/categoriaanimal/new" class="btn btn-default">Nova Categoria</a>
+
+           </p>
+
+           <table class="table">
+                <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome Categoria</th>
+
+                </tr>
+
+                </thead>
+                <tbody>
+
+                    <template [ngIf]="1>2">
+                        <tr>
+                            <td>Teste</td>
+                        </tr>
+
+                    </template>
+
+                <tr *ngFor="let categoriaAnimal of categoriaanimal">
+                    <td>{{categoriaAnimal.id}}</td>
+                    <td>{{categoriaAnimal.nomeCategoria}}</td>
+                    <td>
+                        <button type="button" class="btn btn-default" (click)="goToEdit(categoriaAnimal.id)">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </button>
+                        <button type="button" class="btn btn-danger" (click)="deleteCategoria(categoriaAnimal.id)" >
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+          </table>
+      </div>
+
+</div>
+

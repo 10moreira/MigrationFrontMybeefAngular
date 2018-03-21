@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <h1>Editar Rebanho</h1>
+    <form name="form">
+      <div>
+        <label>Código:</label>
+        <span>{{rebanho.id}}</span>
+      </div>
+    <div class="form-group">
+        <label for=""></label>
+    <input type="number" id="" name="ano" class="form-control" placeholder="Altere o ano"
+       [(ngModel)] = "rebanho.id"/>
+    </div>
+     <button type="button" class="btn btn-default" (click)="submit()">Enviar</button>
+      </form>
+
+    </div>
+
+</div>
